@@ -12,4 +12,9 @@ users = [ 'Foxy', 'RedWolf', 'Zeeker', 'Kyleptomaniac', 'SkullKid' ]
 # for user in users[1:4]:
 #     print(user)
 
-
+for user in users:
+    if user == 'Zeeker':
+        print(f'{user}: Pleb of the Realm')
+        break
+    else:
+        print(user)
