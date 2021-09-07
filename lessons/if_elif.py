@@ -6,3 +6,5 @@ if age < 18:
     print('You are a minor.')
 elif age < 21:
     print('You are legally an adult, but under 21.')
+else:
+    print('You are 21+! Hurray?')
