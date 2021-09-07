@@ -13,9 +13,14 @@
 
 #endregion
 
+# OPERATORS
+# <, >, ==, !=, =>, =<
+
 carnivore = input('Do you eat meat? (y/n): ')
 
 if carnivore == 'y':
     print('Here is the menu...')
 else:
     print('Here is the vegetarian menu...')
+
+
