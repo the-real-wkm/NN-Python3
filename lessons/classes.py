@@ -1,12 +1,15 @@
 
 class Planet:
 
+    # Class Variable
     shape = 'Spherical'
 
+    # Class method, accessible by all instances/objects and by the class itself
     @classmethod
     def commons(cls):
         return f'Planets are a {cls.shape} shape due to gravity.'
 
+    # A method that only takes the provided input and does not assign it. Consistent across all instances. Callable on class level.
     @staticmethod
     def spin(speed = '[Speed Unknown]'):
         return f'The Planet spins at a speed of: {speed}'
