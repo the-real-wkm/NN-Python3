@@ -14,10 +14,19 @@ def starterTypings(dict):
     for key, val in dict.items():
         print(f'{key} is a {val} type Pokemon!')
 
+def typeCounts(dict):
+    types = list(dict.values())
+    for t in set(types):
+        count = types.count(t)
+        print(f'There are {count} {t} type starters.')
+
+
 while promptToContinue():
     starter = input('Starter Pokemon Name: ')
     typing = input('Start Pokemon Type: ')
 
     starter_pkmn[starter] = typing
 
+print('\n\n--------------\n')
 starterTypings(starter_pkmn)
+typeCounts(starter_pkmn)
