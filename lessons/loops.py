@@ -28,11 +28,13 @@ num = 0
 
 while num < age:
     if num == 0:
+        # Continue skips this iteration of the while loop. Must add one before continuing or num will never increase
+        num += 1
         continue
     if num % 2 == 0:
         print(num)
-    num += 1
     if num > 20:
         break
+    num += 1
 
 #endregion
