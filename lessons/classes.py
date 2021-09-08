@@ -1,25 +1,9 @@
+from space.planet import Planet
+from space.calc import planet_mass, planet_vol
 
-class Planet:
+hoth = Planet('Hoth', 200000, 5.5, 'Hoth System')
 
-    # Class Variable
-    shape = 'Spherical'
+hoth_mass = planet_mass(hoth.gravity, hoth.radius)
+hoth_vol = planet_vol(hoth.radius)
 
-    # Class method, accessible by all instances/objects and by the class itself
-    @classmethod
-    def commons(cls):
-        return f'Planets are a {cls.shape} shape due to gravity.'
-
-    # A method that only takes the provided input and does not assign it. Consistent across all instances. Callable on class level.
-    @staticmethod
-    def spin(speed = '[Speed Unknown]'):
-        return f'The Planet spins at a speed of: {speed}'
-
-    # The init funtion is similar to a constructor
-    def __init__(self, name, radius="Unknown", gravity="Unknown", system="Unknown"):
-        self.name = name
-        self.radius = radius
-        self.gravity = gravity
-        self.system = system
-
-    def orbit(self):
-        return(f'{self.name} is orbiting in the {self.system}')
+print(f'{hoth.name} has a mass of {hoth_mass:.3f} and a volume of {hoth_vol:.3f}.')
